@@ -6,17 +6,7 @@
 #Requirements:
 #Must use the for loop (while and until are forbidden)
 #Do not display hidden files
-cut=1
-for element in *
+for i in *
 do
-    for char in $element
-    do
-        if [ "$char" = "-" ]
-        then
-            break
-        fi
-        ((cut++))
-    done
-    echo "${element:$cut}"
-    cut=1
+    echo "$i" | cut -f 2- -d '-'
 done
