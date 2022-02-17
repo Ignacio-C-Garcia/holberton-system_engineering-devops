@@ -18,8 +18,5 @@ do
     then
         echo -n "$number"
     fi
-    if [ "$number" -ne 100 ]
-    then
-        echo ""
-    fi
+    echo ""
 done
