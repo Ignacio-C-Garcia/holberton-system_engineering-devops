@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+#Script that displays:
+#The content of the current directory
+#In a list format
+#Where only the part of the name after the first dash is displayed
+#Requirements:
+#Must use the for loop (while and until are forbidden)
+#Do not display hidden files
+cut=1
+for element in `ls`
+do
+    for char in $element
+    do
+        if [ "$char" = "-" ]
+        then
+            break
+        fi
+        ((cut++))
+    done
+    echo ${element:$cut}
+    cut=1
+done

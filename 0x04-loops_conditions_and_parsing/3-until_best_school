@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#Prints "Best School" 10 times
+#Requirements:
+#Must use the until loop(for and while are forbidden)
+times=10
+until [ $times -le 0 ]
+do
+    echo "Best School"
+    ((times--))
+done
