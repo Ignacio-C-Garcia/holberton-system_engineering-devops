@@ -7,7 +7,7 @@
 #Must use the for loop (while and until are forbidden)
 #Do not display hidden files
 cut=1
-for element in `ls`
+for element in *
 do
     for char in $element
     do
@@ -17,6 +17,6 @@ do
         fi
         ((cut++))
     done
-    echo ${element:$cut}
+    echo "${element:$cut}"
     cut=1
 done

@@ -7,18 +7,18 @@
 #Otherwise, displays the number
 for number in {1..100}
 do
-    if [ $(($number % 3)) -eq 0 ]
+    if [ $((number % 3)) -eq 0 ]
     then
         echo -n "Fizz"
     fi
-    if [ $(($number % 5)) -eq 0 ]
+    if [ $((number % 5)) -eq 0 ]
     then
         echo -n "Buzz"
-    elif [ $(($number % 3)) -ne 0 ]
+    elif [ $((number % 3)) -ne 0 ]
     then
-        echo -n $number
+        echo -n "$number"
     fi
-    if [ $number -ne 100 ]
+    if [ "$number" -ne 100 ]
     then
         echo ""
     fi
