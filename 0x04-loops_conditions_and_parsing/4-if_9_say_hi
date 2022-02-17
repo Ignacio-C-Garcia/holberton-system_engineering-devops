@@ -5,11 +5,11 @@
 #Must use the while loop(for and until are forbidden)
 #must use the if statement
 times=1
-while [ "$times" -lt 10 ]
+while [ "$times" -le 10 ]
 do
     echo "Best School"
     ((times++))
-    if [ "$times" -eq 9 ]
+    if [ "$times" -eq 10 ]
     then
         echo "Hi"
     fi
