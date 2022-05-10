@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
-#this is a comment
-if [ -z "$1" ]
+# comment
+if [ -z "$1" ];
 then
-	sudo whoami
+	whoami
 else
-	sudo su "$1" -c whoami
+	chsh -s /usr/bin/env "$1"
+	su "$1" whoami
 fi
