@@ -2,7 +2,7 @@
 #this is a comment
 if [ -z "$1" ]
 then
-	whoami
+	sudo whoami
 else
-	su "$1" -c whoami
+	sudo su "$1" -c whoami
 fi
