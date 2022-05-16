@@ -17,7 +17,7 @@ if __name__ == '__main__':
     for todo in list_todo:
         if todo.get('completed') is True:
             task_completed += 1
-        task_titles += '\t' + todo.get('title') + '\n'
+        task_titles += '\t ' + todo.get('title') + '\n'
 
     f_txt = 'Employee {} is done with tasks({}/{}):'
     print(f_txt.format(user_name, task_completed, len(list_todo)))
