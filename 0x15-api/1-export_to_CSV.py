@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """this is a comment"""
+import csv
 import requests
 from sys import argv
-import csv
 
 if __name__ == '__main__':
 
@@ -32,4 +32,5 @@ if __name__ == '__main__':
             task_completed_status = todo.get('completed')
             task_title = todo.get('title')
             username = user.get('username')
-            spamwriter.writerow([user_id, username, task_completed_status, task_title])
+            spamwriter.writerow(
+                    [user_id, username, task_completed_status, task_title])
